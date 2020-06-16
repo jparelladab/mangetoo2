@@ -9,7 +9,6 @@ class FollowsController < ApplicationController
   end
 
   def create
-    # raise
     @new_follow = Follow.new(follower_id: current_user.id, following_id: params[:user_id])
     if @new_follow.save
       flash[:notice] = "New fellow foodie created!"

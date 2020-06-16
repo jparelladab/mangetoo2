@@ -1,3 +1,4 @@
+
 <div class="foodies-banner" style="background-image: linear-gradient(rgba(20,20,20,0.7),rgba(20,20,20,0.7)), url(https://images.unsplash.com/photo-1553321846-ad6616f5d1db?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60);">
   <div class="container foodies-banner-heading">
     <h3>Foodie Network</h3>
@@ -71,7 +72,7 @@
         <% if foodie.photo.attached? %>
           <%= cl_image_tag foodie.photo.key, alt: "Image of user" %>
         <% else %>
-          <%=image_tag(foodie.default_image)%>
+          <%=image_tag "MangeToo_DefaultUserImage"%>
         <% end %>
       </div>
       <% end %>
@@ -99,3 +100,4 @@
 <% else %>
   <p id="no-more-foodies">You know everyone on the MangeToo network!</p>
 <% end %>
+<% raise %>
